@@ -1,0 +1,37 @@
+{
+  "name": "muze-cli",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "dev": "ts-node index.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "muze-cli": "./dist/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^5.4.1",
+    "download-git-repo": "^3.0.2",
+    "figlet": "^1.8.0",
+    "fs-extra": "^11.3.0",
+    "inquirer": "^12.3.2",
+    "ora": "^8.1.1",
+    "shelljs": "^0.8.5",
+    "table": "^6.9.0"
+  },
+  "devDependencies": {
+    "@types/figlet": "^1.7.0",
+    "@types/fs-extra": "^11.0.4",
+    "@types/inquirer": "^9.0.7",
+    "@types/node": "^22.10.7",
+    "@types/shelljs": "^0.8.15",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.7.3"
+  }
+}
