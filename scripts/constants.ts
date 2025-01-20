@@ -29,35 +29,35 @@ export const messages = [
 
 export const commitTypes = [
   {
-    name: 'feat: A new feature',
+    name: 'feat: 新功能',
     value: 'feat'
   },
   {
-    name: 'fix: A bug fix',
+    name: 'fix: 修复 Bug',
     value: 'fix'
   },
   {
-    name: 'docs: Documentation only changes',
+    name: 'docs: 仅文档更新',
     value: 'docs'
   },
   {
-    name: 'style: Changes that do not affect the meaning of the code',
+    name: 'style: 代码格式或者样式修改（不影响代码逻辑）',
     value: 'style'
   },
   {
-    name: 'refactor: A code change that neither fixes a bug nor adds a feature',
+    name: 'refactor: 代码重构（既不是新增功能，也不是修复 Bug）',
     value: 'refactor'
   },
   {
-    name: 'perf: A code change that improves performance',
+    name: 'perf: 性能优化',
     value: 'perf'
   },
   {
-    name: 'test: Adding missing tests or correcting existing tests',
+    name: 'test: 新增测试或修改现有测试',
     value: 'test'
   },
   {
-    name: 'chore: Changes to the build process or auxiliary tools',
+    name: 'chore: 构建过程或辅助工具的变动',
     value: 'chore'
   }
 ]
