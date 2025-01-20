@@ -7,6 +7,7 @@ import { Command } from 'commander'
 import path from 'path'
 import { fileURLToPath } from 'url'
 import create from './scripts/create.js'
+import commit from './scripts/commit.js'
 import { templates } from './scripts/constants.js'
 
 const __filename = fileURLToPath(import.meta.url)
@@ -27,6 +28,9 @@ program
   .option('-f --force', '强制覆盖本地同名项目')
   .option('-i --ignore', '忽略项目相关描述,快速创建项目')
   .action(create)
+
+// 添加提交命令
+program.command('commit').description('提交代码变更').action(commit)
 
 // 查看模板列表
 program
