@@ -4,12 +4,12 @@
 export const templates = [
   {
     name: 'next-template',
-    value: 'https://github.com/Muze-GitHub/muze-next-template.git',
+    value: 'direct:https://github.com/Muze-GitHub/muze-next-template.git',
     desc: '基于Next.js自定义react项目模板'
   },
   {
     name: 'umi-template',
-    value: 'https://github.com/Muze-GitHub/muze-umi-template.git',
+    value: 'direct:https://github.com/Muze-GitHub/muze-umi-template.git',
     desc: '基于umi的自定义react项目模板'
   }
 ]

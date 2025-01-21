@@ -6,9 +6,11 @@ import { table } from 'table'
 import { Command } from 'commander'
 import path from 'path'
 import { fileURLToPath } from 'url'
-import create from './scripts/create.js'
-import commit from './scripts/commit.js'
-import { templates } from './scripts/constants.js'
+import create from './scripts/create'
+import commit from './scripts/commit'
+import analyze from './scripts/analyze'
+import stats from './scripts/stats'
+import { templates } from './scripts/constants'
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
@@ -31,6 +33,24 @@ program
 
 // 添加提交命令
 program.command('commit').description('提交代码变更').action(commit)
+
+// 添加性能分析命令
+program
+  .command('analyze')
+  .description('分析项目性能和依赖')
+  .option('-d, --deps', '分析依赖')
+  .option('-b, --bundle', '分析打包体积')
+  .option('-t, --time', '分析构建时间')
+  .action(analyze)
+
+// 添加项目统计命令
+program
+  .command('stats')
+  .description('显示项目统计信息')
+  .option('-g, --git', '显示 Git 统计')
+  .option('-c, --code', '显示代码统计')
+  .option('-a, --all', '显示所有统计')
+  .action(stats)
 
 // 查看模板列表
 program
