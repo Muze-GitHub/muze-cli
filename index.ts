@@ -6,11 +6,12 @@ import { table } from 'table'
 import { Command } from 'commander'
 import path from 'path'
 import { fileURLToPath } from 'url'
-import create from './scripts/create'
-import commit from './scripts/commit'
-import analyze from './scripts/analyze'
-import stats from './scripts/stats'
-import { templates } from './scripts/constants'
+import create from './scripts/create.js'
+import commit from './scripts/commit.js'
+import analyze from './scripts/analyze.js'
+import clean from './scripts/clean.js'
+import stats from './scripts/stats.js'
+import { templates } from './scripts/constants.js'
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
@@ -42,6 +43,14 @@ program
   .option('-b, --bundle', '分析打包体积')
   .option('-t, --time', '分析构建时间')
   .action(analyze)
+
+// 添加清理命令
+program
+  .command('clean')
+  .description('分析并清理未使用的文件')
+  .option('-e, --export', '导出未使用文件报告到 Excel')
+  .option('-r, --remove', '删除未使用的文件')
+  .action(clean)
 
 // 添加项目统计命令
 program
