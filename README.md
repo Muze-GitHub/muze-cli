@@ -1,6 +1,6 @@
 # Muze CLI
 
-一个功能强大的前端项目开发工具，帮助你提高开发效率。
+一个前端项目开发工具，帮助你提高开发效率。
 
 ## 功能特点
 
@@ -30,9 +30,8 @@ muze-cli create <project-name>
 
 支持多种项目模板：
 
-- Vue3 + TypeScript
-- React + TypeScript
-- Node.js + TypeScript
+- C 端项目： Next.js + TypeScript + TailwindCss ...
+- B 端项目模板：Umi + TypeScript + Ant Design ....
 - 更多模板持续添加中...
 
 ### Git 提交
@@ -176,28 +175,3 @@ async function clean(options: CleanOptions) {
 ### .gitignore 支持
 
 CLI 工具会自动读取项目中的 `.gitignore` 文件，在分析时排除被忽略的文件。
-
-### TypeScript 配置
-
-推荐的 `tsconfig.json` 配置：
-
-```json
-{
-  "compilerOptions": {
-    "target": "ES2020",
-    "module": "ES2020",
-    "moduleResolution": "node",
-    "esModuleInterop": true,
-    "strict": false,
-    "skipLibCheck": true
-  }
-}
-```
-
-## 贡献指南
-
-欢迎提交 Issue 和 Pull Request 来帮助改进这个工具！
-
-## 许可证
-
-ISC License
